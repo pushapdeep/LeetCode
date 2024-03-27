@@ -3,39 +3,14 @@ class Solution {
         int i=0,j=0;
         int count=0;
         long prod=1;
-        while(true)
+        for(;i<nums.length;i++)
         {
-            boolean flag=false;
-            boolean flag1=false;
-            while(i<nums.length)
+            prod=prod*nums[i];
+            while(j<=i && prod>=k)
             {
-                flag=true;
-                prod=prod*nums[i];
-                System.out.println(prod+" "+j+" "+i);
-                if(prod<k)
-                {
-                    count+=i-j+1;
-                }
-                i++;
-                if(prod>=k)
-                {
-                    break;
-                }
-            }
-            while(j<i && prod>=k)
-            {
-                flag1=true;
                 prod=prod/nums[j++];
-                if(prod<k)
-                {
-                    count+=i-j; 
-                    break;
-                }
             }
-            if(!flag && !flag1)
-            {
-                break;
-            }
+            count+=i-j+1;
         }
         return count;
     }
