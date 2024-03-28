@@ -7,14 +7,7 @@ class Solution {
             map.put(nums[i],map.getOrDefault(nums[i],0)+1);
             while(map.get(nums[i])>k)
             {
-                if(map.get(nums[j])>=1)
-                {
-                    map.put(nums[j],map.get(nums[j])-1);
-                }
-                else
-                {
-                    map.remove(nums[j]);
-                }
+                map.put(nums[j],map.get(nums[j])-1);
                 j++;
             }
             len=Math.max(len,i-j+1);
