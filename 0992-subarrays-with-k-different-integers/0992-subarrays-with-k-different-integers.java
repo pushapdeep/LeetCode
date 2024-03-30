@@ -22,7 +22,7 @@ class Solution {
                 }
                 j++;
             }
-            count+=i-j;
+            count+=i-j+1;
         }
         return count;
     }
