@@ -15,7 +15,6 @@ class Solution {
             return 0;
         }
         int c=student.size();
-        int i=0;
         int frontindex=-1;
         while(student.size()>0)
         {
@@ -30,7 +29,6 @@ class Solution {
                 frontindex++;
                 student.add(student.remove());
             }
-            i++;
             if(student.size()>0 && frontindex==student.size())
             {
                 break;
